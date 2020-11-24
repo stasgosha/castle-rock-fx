@@ -1,0 +1,37 @@
+.pre-footer-section{
+	padding: 166px 0 55px;
+	position: relative;
+
+	&:before{
+		content: '';
+		display: block;
+		width: 100%;
+		min-width: 1920px;
+		height: 100%;
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+		background: #eeedef url(../img/decorations/pre-footer-lines.svg) no-repeat center center / cover;
+		clip-path: polygon(calc(100% - 475px) 0, 100% 90px, 100% 100%, 0 100%, 0 90px);
+	}
+
+	.container{
+		position: relative;
+		z-index: 2;
+	}
+
+	.section-inner{
+		display: flex;
+		align-items: center;
+	}
+
+	.section-content{
+		flex: auto;
+		margin-right: 50px;
+	}
+
+	.section-button{
+		flex: none;
+	}
+}

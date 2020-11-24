@@ -1,0 +1,277 @@
+.analytics-section{
+	padding: 100px 0;
+
+	.section-caption{
+		max-width: 590px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 24px;
+	}
+
+	.section-inner{
+		display: flex;
+		width: calc(100% + 15px * 2);
+		margin-left: -15px;
+		margin-right: -15px;
+		
+		> .item{
+			padding: 0 15px;
+
+			&.section-left,
+			&.section-right{
+				width: calc(100% / 12 * 3);
+			}
+
+			&.section-middle{
+				width: calc(100% / 12 * 6);
+			}
+		}
+	}
+
+	.column-header{
+		min-height: 76px;
+		display: flex;
+		align-items: center;
+		margin-bottom: 16px;
+
+		h3{
+			width: 100%;
+		}
+	}
+
+	.vertical-news-list{
+		position: relative;
+
+		&:after{
+			content: '';
+			display: block;
+			width: 100%;
+			height: 240px;
+			background: linear-gradient(to bottom, transparent, #fff);
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			pointer-events: none;
+		}
+
+		.small-news-card{
+			margin-bottom: 24px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.small-news-card{
+	.card-caption{
+		margin-bottom: 4px;
+
+		a{
+			color: #339;
+
+			&:hover,
+			&:focus{
+				color: $accent;
+			}
+		}
+	}
+
+	.card-date{
+		font-size: 14px;
+		letter-spacing: 0.04em;
+		color: $text-light;
+		margin-bottom: 8px;
+		max-width: 165px;
+		display: block;
+	}
+
+	.card-text{
+		line-height: 1.25;
+		letter-spacing: 0.04em;
+		max-height: calc(1.25em * 5); // 5 lines
+		overflow: hidden;
+	}
+}
+
+.trader-dashboard-component{
+	.cmp-line{
+		margin-bottom: 8px;
+		display: flex;
+		align-items: flex-end;
+
+		.left-label,
+		.right-label{
+			width: 50px;
+			flex: none;
+			font-size: 14px;
+			line-height: 24px;
+			font-weight: bold;
+		}
+
+		.left-label{
+			margin-right: 20px;
+			color: #339968;
+		}
+
+		.right-label{
+			margin-left: 20px;
+			color: #BE2727;
+			text-align: right;
+		}
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		.line-bar{
+			flex: auto;
+
+			.bar-name{
+				margin-bottom: 4px;
+				font-size: 14px;
+				line-height: 17px;
+				font-weight: bold;
+				text-transform: uppercase;
+				text-align: center;
+			}
+
+			.bar{
+				width: 100%;
+				border-radius: 5px;
+				overflow: hidden;
+				position: relative;
+				background: #BE2727;
+				height: 24px;
+
+				&:after{
+					content: '';
+					display: block;
+					width: 1px;
+					height: 100%;
+					background: rgba(#fff, .4);
+					position: absolute;
+					left: 50%;
+					top: 0;
+					z-index: 2;
+				}
+
+				.bar-filled{
+					background: #339968;
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	.cmp-legend{
+		padding: 0 70px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.left-label,
+		.middle-label,
+		.right-label{
+			font-size: 14px;
+			line-height: 17px;
+			width: 40px;
+		}
+
+		.left-label{
+			color: #339968;
+		}
+
+		.middle-label{
+			color: #4C4A58;
+			text-align: center;
+		}
+
+		.right-label{
+			color: #BE2727;
+			text-align: right;
+		}
+	}
+}
+
+.tabs-nav{
+	display: flex;
+	width: 100%;
+	border-radius: $r;
+	border: 1px solid #4C4A58;
+
+	li{
+		flex: auto;
+		margin-top: -1px;
+		margin-bottom: -1px;
+
+		&:first-child{
+			margin-left: -1px;
+		}
+
+		&:last-child{
+			margin-right: -1px;
+		}
+	}
+
+	.tab-btn{
+		border-radius: $r;
+		font-size: 16px;
+		line-height: 1.5;
+		color: $text-dark;
+		font-family: $second-font;
+		font-weight: 900;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 76px;
+		padding: 12px;
+		width: 100%;
+
+		&:hover,
+		&:focus{
+			color: $primary;
+			outline: none;
+		}
+
+		&.current{
+			background: $primary;
+			color: #fff;
+		}
+	}
+}
+
+.youtube-subscribe-widget{
+	margin-top: 24px;
+
+	.widget-caption{
+		margin-bottom: 8px;
+		font-size: 14px;
+		font-weight: bold;
+		color: #CA3535;
+
+		a{
+			color: inherit;
+
+			&:hover,
+			&:focus{
+				color: $primary;
+			}
+		}
+	}
+}
+
+.vertical-videos-list{
+	margin-top: 24px;
+	margin-bottom: 24px;
+
+	.video-card{
+		margin-bottom: 24px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}

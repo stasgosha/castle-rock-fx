@@ -1,0 +1,18 @@
+<svg width="0" height="0" class="hidden">
+	<symbol viewBox="0 0 231 231" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" fill-rule="evenodd" clip-rule="evenodd" id="close">
+		<path d="M202 0L0 202l28 28L230 28 202 0z"/><path d="M28 0l202 202-28 28L0 28 28 0z"/>
+	</symbol>
+
+	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 16" id="facebook"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.2 16V8.69h2.35l.36-2.84H5.2V4.04c0-.83.2-1.39 1.34-1.39H8V.11C7.75.06 6.89 0 5.89 0 3.8 0 2.37 1.32 2.37 3.75v2.1H0V8.7h2.37V16H5.2z"/></symbol>
+
+
+	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 13" id="twitter"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.56.24a6.6 6.6 0 01-2.09.8 3.27 3.27 0 00-5.58 2.99A9.32 9.32 0 011.11.6a3.27 3.27 0 001.02 4.38 3.28 3.28 0 01-1.49-.41v.04a3.29 3.29 0 002.64 3.22c-.49.13-1 .15-1.49.06a3.29 3.29 0 003.07 2.28A6.59 6.59 0 010 11.53 9.3 9.3 0 005.03 13c6.04 0 9.34-5 9.34-9.34l-.01-.43A6.6 6.6 0 0016 1.53c-.59.27-1.22.45-1.88.53A3.3 3.3 0 0015.55.24h.01z"/></symbol>
+
+	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="instagram"><path d="M9 0C5.3 0 1.8-.3.5 3.1-.1 4.5 0 6.3 0 9c0 2.3 0 4.4.5 5.8C1.8 18.3 5.3 18 9 18c3.5 0 7.2.4 8.5-3 .6-1.5.5-3.3.5-6 0-3.4.2-5.7-1.5-7.4C14.8-.2 12.5 0 9 0zm-.8 1.6c7.7 0 8.7-.8 8.1 11-.2 4.2-3.4 3.7-7.3 3.7-7.2 0-7.4-.2-7.4-7.3 0-7.3.6-7.4 6.6-7.4zm5.6 1.5a1 1 0 100 2.2 1 1 0 000-2.2zM9 4.4a4.6 4.6 0 100 9.2 4.6 4.6 0 000-9.2zM9 6c4 0 4 6 0 6S5 6 9 6z"/></symbol>
+
+	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 26" id="youtube"><path fill-rule="evenodd" clip-rule="evenodd" d="M33.7.8c1.6.4 2.9 1.7 3.3 3.2.8 2.9.7 8.9.7 8.9s0 6-.7 8.8a4.6 4.6 0 01-3.3 3.3c-2.8.7-14.3.7-14.3.7S7.9 25.7 5 25a4.6 4.6 0 01-3.3-3.2C1 19 1 13 1 13s0-6 .7-8.9A4.7 4.7 0 015 .8C7.9 0 19.4 0 19.4 0s11.5 0 14.3.8zm-8.4 12l-9.6 5.6v-11l9.6 5.5z"/></symbol>
+
+	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" id="linkedin"><path d="M26 25.7v-9.4c0-4.6-1-8.2-6.4-8.2a5.6 5.6 0 00-5 2.8h-.1V8.6H9.4v17.1h5.3v-8.5c0-2.2.4-4.4 3.2-4.4 2.7 0 2.8 2.6 2.8 4.6v8.3H26zM.7 8.6H6v17.1H.7V8.6zM3.4 0A3 3 0 00.3 3c0 1.8 1.3 3.2 3 3.2 1.8 0 3.1-1.4 3.1-3.1a3 3 0 00-3-3.1z"/></symbol>
+
+	<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 10" id="arrow-right"><path d="M0 5h32m0 0l-6-4m6 4l-6 4"/></symbol>
+</svg>

@@ -1,0 +1,53 @@
+.our-values-section{
+	padding: 100px 0 60px;
+
+	.section-caption{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 33px;
+
+		.sc-title{
+			max-width: 590px;
+		}
+
+		.sc-subtitle{
+			max-width: 770px;
+		}
+	}
+}
+
+.values-list{
+	display: flex;
+	flex-wrap: wrap;
+	width: calc(100% + 85px * 2);
+	margin-left: -85px;
+	margin-right: -85px;
+	margin-bottom: -32px;
+	
+	.item{
+		width: 50%;
+		padding: 0 85px;
+		margin-bottom: 32px;
+	}
+}
+
+.value-card{
+	.card-image{
+		width: 100px;
+		height: 100px;
+		display: flex;
+		align-items: flex-end;
+		margin-bottom: 16px;
+
+		img{
+			display: block;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	.card-caption{
+		margin-bottom: 8px;
+	}
+}

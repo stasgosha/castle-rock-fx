@@ -1,0 +1,90 @@
+.more-than-section{
+	padding: 100px 0;
+	background: #eeedef url(../img/decorations/benefits-lines.svg) no-repeat center center / cover;
+
+	.section-caption{
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 84px;
+	}
+
+	.section-footer{
+		margin-top: 52px;
+		width: 100%;
+		max-width: 370px;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		.btn{
+			margin-bottom: 8px;
+		}
+
+		.note{
+			font-size: 16px;
+			line-height: 1.208;
+			color: $text-dark;
+			opacity: .7;
+		}
+	}
+}
+
+.more-than-list{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-bottom: -40px;
+	width: calc(100% + 50px * 2);
+	margin-left: -50px;
+	margin-right: -50px;
+	counter-reset: benefits;
+	
+	.item{
+		padding: 0 50px;
+		margin-bottom: 40px;
+		width: 33.333%;
+	}
+}
+
+.more-than-card{
+	display: flex;
+	counter-increment: benefits;
+	align-items: center;
+
+	.card-image{
+		width: 100px;
+		height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 24px;
+		flex: none;
+
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.card-content{
+		font-size: 16px;
+		line-height: 1.208;
+		color: $text-light;
+		letter-spacing: 0.04em;
+
+		&:before{
+			content: '0'counter(benefits);
+			display: block;
+			font-size: 24px;
+			color: $primary;
+			margin-bottom: 8px;
+			line-height: 1.2;
+			font-family: $second-font;
+		}
+	}
+}

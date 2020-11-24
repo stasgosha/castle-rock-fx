@@ -1,0 +1,152 @@
+.form{
+	.input-field,
+	textarea,
+	.select-field select,
+	input[type="date"]{
+		border: 1px solid #EBEBEB;
+		appearance: none;
+		background: #fff;
+		border-radius: 2px;
+		flex: auto;
+		height: 46px;
+		font-size: 16px;
+		color: $text-color;
+		font-family: $main-font;
+		font-weight: 400;
+		padding: 0 20px;
+		outline: none !important;
+		transition: all $t;
+		width: 100%;
+		appearance: none;
+		// max-width: 260px;
+
+		&[readonly]{
+			color: rgba($text-color, .3);
+		}
+
+		&::placeholder{
+			color: #6D8092;
+			opacity: 1;
+			transition: all $t;
+		}
+
+		&:focus:not([readonly]){
+			border-color: $primary;
+
+			&::placeholder{
+				opacity: 1;
+			}
+		}
+
+		@media screen and (max-width: 767px){
+			font-size: 14px;
+			height: 38px;
+			padding: 0 12px;
+		}
+	}
+
+	.input-field,
+	textarea{
+	}
+
+	input[type="date"]{
+		appearance: none;
+		border-radius: 2px;
+	}
+
+	textarea{
+		resize: none;
+		padding: 15px 20px;
+		height: 125px;
+		display: block;
+
+		@media screen and (max-width: 767px){
+			height: 100px;
+			padding: 10px 12px;
+		}
+	}
+}
+
+.checkbox{
+	position: relative;
+
+	.fake-label{
+		font-size: 12px;
+		line-height: 22px;
+		color: #C4C4C4;
+		padding-left: 25px;
+		cursor: pointer;
+		font-weight: 400;
+		display: block;
+
+		&:before{
+			content: '';
+			display: block;
+			width: 16px;
+			height: 16px;
+			border-radius: 2px;
+			background: #fff;
+			position: absolute;
+			left: 0;
+			top: 3px;
+		}
+
+		&:after{
+			content: '';
+			display: block;
+			width: 16px;
+			height: 16px;
+			background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'%3E%3Cpath d='M3.83 7.74a.5.5 0 01-.72 0L.22 4.85a.77.77 0 010-1.08L.6 3.4c.3-.3.78-.3 1.08 0l1.8 1.8L8.33.34c.3-.3.79-.3 1.08 0l.37.37c.3.3.3.78 0 1.08L3.83 7.74z' fill='%23E30613'/%3E%3C/svg%3E") no-repeat center center / contain;
+			background-size: 10px 8px;
+			position: absolute;
+			left: 0;
+			top: 3px;
+			opacity: 0;
+			transition: all $t;
+		}
+	}
+
+	input:checked + .fake-label:after{
+		opacity: 1;
+	}
+}
+
+.select-field{
+	position: relative;
+
+	&:after{
+		content: '';
+		display: block;
+		width: 10px;
+		height: 6px;
+		background: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%234C4A58'/%3E%3C/svg%3E") no-repeat center center / contain;
+		position: absolute;
+		right: 13px;
+		top: calc(50% - 3px);
+	}
+
+	select{
+		appearance: none;
+		border: 1px solid $gray;
+		padding: 9px 27px 9px 14px;
+		border-radius: $r;
+		color: $text-color;
+		font-size: 16px;
+		line-height: 1.25;
+		font-family: inherit;
+		display: block;
+		width: 100%;
+		box-shadow: none;
+		cursor: pointer;
+
+		&:focus{
+			outline: none;
+			// border-color: $accent;
+		}
+	}
+
+	&.language-select{
+		width: 65px;
+		text-transform: uppercase;
+	}
+}

@@ -1,0 +1,79 @@
+.awards-section{
+	background: $dark url(../img/decorations/awards-lines.svg) no-repeat center center / cover;
+	position: relative;
+	color: #fff;
+
+	.section-inner{
+		display: flex;
+	}
+
+	.section-content{
+		padding: 100px 0;
+	}
+
+	.section-caption{
+		margin-bottom: 70px;
+	}
+
+	.section-image{
+		width: calc(100% / 12 * 5);
+		flex: none;
+		position: relative;
+		filter: drop-shadow(-4px -8px 21px rgba(0, 0, 0, 0.16));
+		margin-right: 20px;
+
+		img{
+			position: absolute;
+			width: 875px;
+			height: calc(100% + 110px);
+			top: -110px;
+			right: -10px;
+			clip-path: polygon(110px 0%, calc(100% - 210px) 110px, 100% calc(100% - 420px), calc(100% - 210px) 100%, 0 100%, 0 110px);
+		}
+	}
+
+	.section-footer{
+		.btn{
+			font-weight: 400;
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+	}
+}
+
+.awards-list{
+	display: flex;
+	flex-wrap: wrap;
+	width: calc(100% + 40px * 2);
+	margin-left: -40px;
+	margin-right: -40px;
+	
+	.item{
+		padding: 0 40px;
+		margin-bottom: 50px;
+		width: 33.333%;
+	}
+}
+
+.award-card{
+	.card-image{
+		height: 71px;
+		display: flex;
+		align-items: flex-end;
+		margin-bottom: 16px;
+
+		img{
+			display: block;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	.card-caption{
+		margin-bottom: 8px;
+	}
+
+	p{
+		letter-spacing: 0.04em;
+	}
+}
