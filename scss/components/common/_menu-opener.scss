@@ -25,10 +25,9 @@
 		background: $primary;
 		height: 2px;
 		display: block;
-		margin-bottom: 5px;
+		margin-bottom: 8px;
 		transition: all $t;
-		width: 26px;
-		border-radius: 2px;
+		width: 30px;
 
 		&:last-child{
 			margin-bottom: 0;

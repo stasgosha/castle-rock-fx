@@ -258,6 +258,27 @@ body{
 	&.text-left{
 		text-align: left;
 	}
+
+	@media screen and (max-width: 767px){
+		.sc-title{
+			font-size: 40px;
+		}
+
+		.sc-subtitle{
+			font-size: 20px;
+			margin-top: 16px;
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.sc-title{
+			font-size: 32px;
+		}
+
+		.sc-subtitle{
+			font-size: 16px;
+		}
+	}
 }
 
 .show-more-btn{

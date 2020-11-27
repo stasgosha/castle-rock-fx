@@ -33,6 +33,25 @@ document.addEventListener('DOMContentLoaded', function(){
 	// 	})
 	// }
 
+	function getRandomInt(max) {
+		return Math.floor(Math.random() * Math.floor(max));
+	}
+
+	$('.wow-random-delay .wow').each(function(i, el){
+		let delay = "0." + (getRandomInt(7) + 2) + "s";
+		el.setAttribute('data-wow-delay', delay);
+		setTimeout(function(){
+			new WOW().init();
+		}, 100)
+	});
+
+	new WOW().init();
+
+	$('[data-delay]').each(function(i, el){
+		$(el).css({
+			transitionDelay: $(el).data('delay')
+		});
+	});
 
 
 	// Sliders

@@ -1,6 +1,36 @@
 .more-than-section{
 	padding: 100px 0;
-	background: #eeedef url(../img/decorations/benefits-lines.svg) no-repeat center center / cover;
+	background: #eeedef;
+	position: relative;
+
+	&:before{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: url(../img/decorations/benefits-lines.svg) no-repeat center center / cover;
+		pointer-events: none;
+	}
+
+	&:after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 200px;
+		background: #eeedef;
+		position: absolute;
+		left: 0;
+		top: calc(100% - 5px);
+		z-index: -1;
+	}
+
+	.container{
+		position: relative;
+		z-index: 2;
+	}
 
 	.section-caption{
 		max-width: 700px;
@@ -31,6 +61,30 @@
 			opacity: .7;
 		}
 	}
+
+	@media screen and (max-width: 1199px){
+		padding-bottom: 110px;
+
+		&:before{
+			background-size: auto calc(100% + 48px + 173px);
+			background-position: 36% bottom;
+			top: 70px;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.section-caption{
+			margin-bottom: 50px;
+			max-width: 440px;
+		}
+
+		&:before{
+			background: url(../img/decorations/benefits-lines-mobile.svg) no-repeat left top / cover;
+			height: calc(100% + 50px);
+			top: -50px;
+			left: 0;
+		}
+	}
 }
 
 .more-than-list{
@@ -47,6 +101,56 @@
 		padding: 0 50px;
 		margin-bottom: 40px;
 		width: 33.333%;
+	}
+
+	@media screen and (max-width: 1199px){
+		width: calc(100% + 57px * 2);
+		margin-left: -57px;
+		margin-right: -57px;
+		
+		.item{
+			padding: 0 57px;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		width: calc(100% + 15px * 2);
+		margin-left: -15px;
+		margin-right: -15px;
+		
+		.item{
+			padding: 0 15px;
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		width: calc(100% + 42px * 2);
+		margin-left: -42px;
+		margin-right: -42px;
+		justify-content: center;
+		
+		.item{
+			padding: 0 42px;
+			width: 50%;
+
+			&:nth-child(odd):last-child{
+				width: calc(100px + 42px * 2);
+			}
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		width: calc(100% + 15px * 2);
+		margin-left: -15px;
+		margin-right: -15px;
+		
+		.item{
+			padding: 0 15px;
+
+			&:nth-child(odd):last-child{
+				width: calc(100px + 15px * 2);
+			}
+		}
 	}
 }
 
@@ -85,6 +189,19 @@
 			margin-bottom: 8px;
 			line-height: 1.2;
 			font-family: $second-font;
+		}
+	}
+
+	@media screen and (max-width: 1199px){
+		flex-direction: column;
+		align-items: flex-start;
+
+		.card-image{
+			margin-bottom: 16px;
+		}
+
+		.card-content{
+			width: 100%;
 		}
 	}
 }

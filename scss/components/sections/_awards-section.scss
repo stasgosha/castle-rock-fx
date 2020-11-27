@@ -1,7 +1,25 @@
 .awards-section{
-	background: $dark url(../img/decorations/awards-lines.svg) no-repeat center center / cover;
+	background: $dark;
 	position: relative;
 	color: #fff;
+
+	&:before{
+		content: '';
+		display: block;
+		width: 100%;
+		min-width: 1920px;
+		height: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		background: url(../img/decorations/awards-lines.svg) no-repeat center center / cover;
+	}
+
+	.container{
+		position: relative;
+		z-index: 2;
+	}
 
 	.section-inner{
 		display: flex;
@@ -29,6 +47,8 @@
 			top: -110px;
 			right: -10px;
 			clip-path: polygon(110px 0%, calc(100% - 210px) 110px, 100% calc(100% - 420px), calc(100% - 210px) 100%, 0 100%, 0 110px);
+			object-fit: cover;
+			object-position: center center;
 		}
 	}
 
@@ -37,6 +57,100 @@
 			font-weight: 400;
 			padding-left: 24px;
 			padding-right: 24px;
+		}
+	}
+
+	@media screen and (max-width: 1199px){
+		&:before{
+			content: '';
+			transform: translate(-50%, -50%);
+		}
+
+		.section-image{
+			width: calc(100% / 12 * 6 + 15px);
+			margin-right: 15px;
+
+			img{
+				width: calc(50vw + 30px);
+				clip-path: polygon(0 0%, calc(100% - 210px) 110px, 100% 620px, calc(100% - 210px) 100%, 0 100%, 0 110px);
+				left: auto;
+				right: 0;
+				object-position: 30% center;
+			}
+		}
+
+		.section-content{
+			width: calc(100% / 12 * 6);
+		}
+
+		.section-caption{
+			margin-bottom: 24px;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		&:before{
+			background-position: -24% center;
+			transform: translate(-50%, -50%) rotate(-30deg);
+		}
+
+		.section-image{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 519px;
+			height: 780px;
+			right: -250px;
+
+			img{
+				width: 100%;
+				height: 100%;
+				top: 0;
+				clip-path: polygon(70px 0, 0 65px, 0 100%, calc(100% - 127px) 100%, 100% calc(100% - 406px), calc(100% - 127px) 65px);
+				transform: scale(-1, 1);
+			}
+		}
+
+		.section-content{
+			width: calc(100% / 12 * 10);
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.section-image{
+			display: none;
+		}
+
+		.section-content{
+			max-width: unset;
+			width: 100%;
+		}
+
+		&:before{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			background: url(../img/decorations/awards-lines-mobile.svg) no-repeat center center / cover;
+			min-width: 768px;
+		}
+
+		.section-caption{
+			text-align: center !important;
+			margin-bottom: 57px;
+		}
+
+		.section-inner{
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.section-footer{
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 	}
 }
@@ -52,6 +166,28 @@
 		padding: 0 40px;
 		margin-bottom: 50px;
 		width: 33.333%;
+	}
+
+	@media screen and (max-width: 1199px){
+		.item{
+			width: 50%;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@media screen and (max-width: 575px){
+		width: calc(100% + 15px * 2);
+		margin-left: -15px;
+		margin-right: -15px;
+		
+		.item{
+			padding: 0 15px;
+		}
 	}
 }
 
@@ -75,5 +211,15 @@
 
 	p{
 		letter-spacing: 0.04em;
+	}
+
+	@media screen and (max-width: 375px){
+		.card-caption{
+			font-size: 16px;
+		}
+
+		p{
+			font-size: 14px;
+		}
 	}
 }

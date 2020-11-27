@@ -6,7 +6,7 @@
 	width: 100%;
 	padding: 18px 0;
 	background: #fff;
-	transition: box-shadow $t;
+	transition: box-shadow $t, padding-bottom $t, padding-top $t;
 
 	.header-inner{
 		display: flex;
@@ -31,6 +31,16 @@
 	&.sticky{
 		box-shadow: 0 0 1px rgba(#000, .6);
 	}
+
+	@media screen and (max-width: 1199px){
+		display: flex;
+		align-items: center;
+		padding: 26px 0;
+
+		&.sticky{
+			padding: 15px 0;
+		}
+	}
 }
 
 .logo-block{
@@ -38,6 +48,10 @@
 		height: 43px;
 		width: auto;
 		display: block;
+
+		@media screen and (max-width: 1199px){
+			height: 28px;
+		}
 	}
 }
 
@@ -67,9 +81,15 @@
 				color: $text-dark;
 				white-space: nowrap;
 
+				&.gold{
+					color: $accent;
+					font-weight: 500;
+				}
+
 				&:hover,
 				&:focus{
-					color: $accent;
+					color: #fff;
+					background: #212121;
 				}
 			}
 
@@ -119,8 +139,8 @@
 			&.current-menu-item,
 			&.current-menu-parent{
 				> a{
-					color: $accent;
-					font-weight: 500;
+					color: #fff;
+					background: #212121;
 				}
 			}
 			
