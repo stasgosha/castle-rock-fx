@@ -1,9 +1,12 @@
 .breadcrumbs-section{
 	padding: 24px 0;
+	position: relative;
+	z-index: 2;
 }
 
 .breadcrumbs-list{
 	display: flex;
+	flex-wrap: wrap;
 
 	li{
 		&:after{

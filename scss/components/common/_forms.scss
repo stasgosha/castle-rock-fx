@@ -3,17 +3,17 @@
 	textarea,
 	.select-field select,
 	input[type="date"]{
-		border: 1px solid #EBEBEB;
+		border: 1px solid #a3a3a3;
 		appearance: none;
 		background: #fff;
-		border-radius: 2px;
+		border-radius: 5px;
 		flex: auto;
-		height: 46px;
+		height: 51px;
 		font-size: 16px;
 		color: $text-color;
 		font-family: $main-font;
 		font-weight: 400;
-		padding: 0 20px;
+		padding: 0 15px;
 		outline: none !important;
 		transition: all $t;
 		width: 100%;
@@ -56,14 +56,9 @@
 
 	textarea{
 		resize: none;
-		padding: 15px 20px;
-		height: 125px;
+		padding: 10px 15px;
+		height: 178px;
 		display: block;
-
-		@media screen and (max-width: 767px){
-			height: 100px;
-			padding: 10px 12px;
-		}
 	}
 }
 
@@ -148,5 +143,22 @@
 	&.language-select{
 		width: 65px;
 		text-transform: uppercase;
+	}
+}
+
+.form{
+	.form-row{
+		margin-bottom: 24px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	.form-label{
+		font-size: 18px;
+		line-height: 1.222;
+		color: rgba(#000, .7);
+		margin-bottom: 8px;
 	}
 }
