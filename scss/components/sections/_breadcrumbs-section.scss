@@ -1,0 +1,35 @@
+.breadcrumbs-section{
+	padding: 24px 0;
+}
+
+.breadcrumbs-list{
+	display: flex;
+
+	li{
+		&:after{
+			content: ' / ';
+			color: $primary;
+		}
+
+		a{
+			color: $primary;
+
+			&:hover,
+			&:focus{
+				text-decoration: underline;
+			}
+		}
+
+		&:last-child{
+			&:after{
+				display: none;
+			}
+
+			a{
+				cursor: default;
+				pointer-events: none;
+				color: #000;
+			}
+		}
+	}
+}

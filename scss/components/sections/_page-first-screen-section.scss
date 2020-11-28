@@ -1,0 +1,132 @@
+.page-first-screen-section{
+	padding: 110px 0;
+	position: relative;
+	min-height: 590px;
+	color: #fff;
+
+	&.centered{
+		display: flex;
+		align-items: center;
+	}
+
+	.section-caption{
+		margin-bottom: 24px;
+
+		.sc-title{
+			color: #fff;
+		}
+	}
+
+	.section-content{
+		max-width: 570px;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		&.wide{
+			max-width: 770px;
+		}
+
+		h2, h3, h4{
+			color: #fff;
+			margin-bottom: 16px;
+			letter-spacing: 0.04em;
+			font-weight: bold;
+			font-family: $main-font;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+
+		.btn{
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+	}
+
+	.section-bg{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		min-width: 1920px;
+		clip-path: polygon(0 0, 100% 0, 100% calc(100% - 100px), calc(100% - 375px) 100%, 0 calc(100% - 100px));
+
+		&:after{
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: #000;
+			opacity: .83;
+		}
+
+		img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			object-fit: cover;
+			object-position: center center;
+		}
+
+		.lines{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 2;
+
+			img{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				object-fit: cover;
+				object-position: center center;
+			}
+		}
+	}
+
+	.container{
+		position: relative;
+		z-index: 2;
+	}
+
+	@media screen and (max-width: 1199px){
+		display: flex;
+		align-items: center;
+
+		.section-bg{
+			transform: translateX(0);
+			right: 0;
+			left: auto;
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.section-bg{
+			right: 50%;
+			transform: translateX(calc(50vw + 140px));
+		}
+	}
+
+	@media screen and (max-width: 767px){
+		.section-bg{
+			transform: translateX(calc(50vw + 300px));
+		}
+	}
+}

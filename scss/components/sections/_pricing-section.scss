@@ -1,0 +1,22 @@
+.pricing-section{
+	padding: 105px 0 100px;
+
+	.section-caption{
+		max-width: 825px;
+		margin: 0 auto 24px;
+	}
+
+	.tab-btn{
+		font-size: 24px;
+
+		@media screen and (max-width: 767px){
+			font-size: 20px;
+		}
+	}
+
+	@media screen and (min-width: 768px){
+		.table{
+			table-layout: fixed;
+		}
+	}
+}

@@ -250,6 +250,7 @@
 		flex: auto;
 		margin-top: -1px;
 		margin-bottom: -1px;
+		border-right: 1px solid #4C4A58;
 
 		&:first-child{
 			margin-left: -1px;
@@ -261,6 +262,7 @@
 
 		&:last-child{
 			margin-right: -1px;
+			border-right: 0;
 
 			.tab-btn{
 				border-radius: 0 $r $r 0;
@@ -292,6 +294,14 @@
 			background: $primary;
 			color: #fff;
 		}
+	}
+}
+
+.tabs-nav-wrapper{
+	overflow-x: auto;
+
+	.tabs-nav{
+		min-width: 440px;
 	}
 }
 
