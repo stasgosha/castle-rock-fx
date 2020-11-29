@@ -33,6 +33,11 @@
 		transition: all $t;
 	}
 
+	&.btn-pale{
+		background: #7575CD;
+		border-color: #7575CD;
+	}
+
 	&:hover,
 	&:focus{
 		outline: none;
