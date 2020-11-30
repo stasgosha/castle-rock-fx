@@ -2,6 +2,7 @@
 	position: relative;
 	padding: 124px 0 65px;
 	background: #eeedef;
+	color: #fff;
 
 	.section-bg{
 		width: 100%;
@@ -35,6 +36,36 @@
 			object-fit: cover;
 			object-position: center center;
 		}
+
+		.lines{
+			// background: url(../img/decorations/first-screen-lines.svg) no-repeat center center / cover;
+			width: 100%;
+			min-width: 2050px;
+			height: calc(100% + 50px);
+			position: absolute;
+			left: 50%;
+			// transform: translateX(-50%);
+			margin-left: calc(-1920px / 2);
+			top: 0;
+			pointer-events: none;
+			z-index: 2;
+			// clip-path: polygon(100% 0, 100% calc(100% - 180px), 380px 100%, 0 calc(100% - 180px), 0 0);
+
+			img{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: block;
+				object-fit: cover;
+				object-position: center center;
+			}
+		}
+	}
+
+	&.no-bg{
+		background: transparent;
 	}
 
 	.container{
@@ -65,19 +96,6 @@
 		width: 100%;
 		max-width: 300px;
 
-		.lines{
-			background: url(../img/decorations/first-screen-lines.svg) no-repeat center center / cover;
-			width: 100vw;
-			min-width: 1920px;
-			height: 784px;
-			position: absolute;
-			top: -25px;
-			right: -375px;
-			pointer-events: none;
-			z-index: 2;
-			clip-path: polygon(100% 0, 100% calc(100% - 180px), 380px 100%, 0 calc(100% - 180px), 0 0);
-		}
-
 		.item{
 			position: relative;
 			margin-bottom: 24px;
@@ -92,6 +110,11 @@
 			align-items: center;
 			justify-content: center;
 			min-height: 152px;
+			visibility: hidden;
+
+			&.animated{
+				visibility: visible;
+			}
 
 			strong{
 				display: block;

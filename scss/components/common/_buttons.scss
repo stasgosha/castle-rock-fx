@@ -119,6 +119,16 @@
 		font-size: 16px;
 	}
 
+	&.btn-dark{
+		background: #181818;
+		color: #fff;
+
+		&:hover,
+		&:focus{
+			background: #fff;
+			color: $dark;
+		}
+	}
 
 	&.fullwidth{
 		width: 100%;

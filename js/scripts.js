@@ -25,20 +25,20 @@ $(function () {
 document.addEventListener('DOMContentLoaded', function(){
 
 	// parallax.js
-	// if (document.body.clientWidth >= 992) {
-	// 	// Parallax
-	// 	document.querySelectorAll('[id*="parallax-viewport"]').forEach(item => {
-	// 		let scene = document.getElementById( item.getAttribute('id') );
-	// 		let parallaxInstance = new Parallax(scene);
-	// 	})
-	// }
+	if (document.body.clientWidth >= 992) {
+		// Parallax
+		document.querySelectorAll('[id*="parallax-viewport"]').forEach(item => {
+			let scene = document.getElementById( item.getAttribute('id') );
+			let parallaxInstance = new Parallax(scene);
+		})
+	}
 
 	function getRandomInt(max) {
 		return Math.floor(Math.random() * Math.floor(max));
 	}
 
 	$('.wow-random-delay .wow').each(function(i, el){
-		let delay = "0." + (getRandomInt(7) + 2) + "s";
+		let delay = "0." + (getRandomInt(5) + 2) + "s";
 		el.setAttribute('data-wow-delay', delay);
 		setTimeout(function(){
 			new WOW().init();
@@ -52,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function(){
 			transitionDelay: $(el).data('delay')
 		});
 	});
+
+
 
 
 	// Sliders
@@ -84,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
 		equalSlideHeight($(el).find('.first-screen-slider'));
 	});
-
 
 	// Scroll to anchor
 	$(document).on('click', 'a[href^="#"]', function (event) {

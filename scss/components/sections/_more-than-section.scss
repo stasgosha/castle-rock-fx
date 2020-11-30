@@ -27,6 +27,22 @@
 		z-index: -1;
 	}
 
+	&.no-bg{
+		background: transparent;
+
+		&:before{
+			display: none;
+		}
+
+		&:after{
+			display: none;
+		}
+	}
+
+	.breadcrumbs-section + &{
+		padding-top: 50px;
+	}
+
 	.container{
 		position: relative;
 		z-index: 2;
@@ -83,6 +99,15 @@
 			height: calc(100% + 50px);
 			top: -50px;
 			left: 0;
+		}
+	}
+
+	@media screen and (max-width: 575px){
+		.section-footer{
+			.btn{
+				padding-left: 24px;
+				padding-right: 24px;
+			}
 		}
 	}
 }
