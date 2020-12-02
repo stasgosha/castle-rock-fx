@@ -14,6 +14,10 @@
 		transform: translateX(-50%);
 		background: #eeedef url(../img/decorations/pre-footer-lines.svg) no-repeat center center / cover;
 		clip-path: polygon(calc(100% - 475px) 0, 100% 90px, 100% 100%, 0 100%, 0 90px);
+
+		.gold &{
+			background: $accent url(../img/decorations/pre-footer-lines-white.svg) no-repeat center center / cover;
+		}
 	}
 
 	.container{
@@ -34,6 +38,15 @@
 
 	.section-button{
 		flex: none;
+	}
+
+	.btn-gold{
+		background: #ECA314;
+
+		&:hover,
+		&:focus{
+			background: darken(#ECA314, 10%);
+		}
 	}
 
 	@media screen and (max-width: 1199px){
@@ -76,6 +89,10 @@
 			min-width: 768px;
 			background: #eeedef url(../img/decorations/pre-footer-lines-mobile.svg) no-repeat center center / cover;
 			clip-path: polygon(205px 0, 100% 40px, 100% 100%, 0 100%, 0 40px);
+
+			.gold &{
+				background: $accent url(../img/decorations/pre-footer-lines-mobile-white.svg) no-repeat center center / cover;
+			}
 		}
 
 		.section-inner{

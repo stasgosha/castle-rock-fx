@@ -53,8 +53,9 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	});
 
-
-
+	setTimeout(function(){
+		$('.account-steps-list').addClass('animated');
+	}, 1100);
 
 	// Sliders
 	function equalSlideHeight(slider){

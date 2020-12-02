@@ -130,6 +130,18 @@
 		}
 	}
 
+	&.btn-gold{
+		background: $accent;
+		border-color: $accent;
+		color: $text-dark;
+
+		&:hover,
+		&:focus{
+			background: darken($accent, 10%);
+			border-color: darken($accent, 10%);
+		}
+	}
+
 	&.fullwidth{
 		width: 100%;
 	}

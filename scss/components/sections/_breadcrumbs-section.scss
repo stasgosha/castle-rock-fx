@@ -12,6 +12,10 @@
 		&:after{
 			content: ' / ';
 			color: $primary;
+
+			.gold &{
+				color: $accent;
+			}
 		}
 
 		a{
@@ -20,6 +24,10 @@
 			&:hover,
 			&:focus{
 				text-decoration: underline;
+			}
+
+			.gold &{
+				color: $accent;
 			}
 		}
 

@@ -1,0 +1,112 @@
+.what-we-do-section{
+	padding: 25px 0 100px;
+
+	.section-caption{
+		max-width: 670px;
+		margin: 0 auto 24px;
+	}
+
+	.section-footer{
+		margin-top: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		a{
+			font-weight: bold;
+			text-decoration: underline;
+			color: $primary;
+			text-align: center;
+
+			&:hover,
+			&:focus{
+				text-decoration: none;
+			}
+		}
+	}
+
+	@media screen and (max-width: 1199px){
+		.section-caption{
+			margin-bottom: 55px;
+		}
+	}
+}
+
+.page-card{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	.card-image{
+		position: relative;
+		border-radius: $r $r 0 0;
+		overflow: hidden;
+		
+		&:before{
+			content: '';
+			display: block;
+			padding-top: 50.35%;
+			width: 100%;
+			background: linear-gradient(to bottom, transparent 0%, #000 100%);
+			opacity: .83;
+			z-index: 2;
+			position: relative;
+		}
+		
+		img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			object-fit: cover;
+			object-position: center center;
+		}
+	}
+
+	.card-caption{
+		position: absolute;
+		left: 24px;
+		bottom: 24px;
+		color: #fff;
+		font-size: 32px;
+		font-weight: 900;
+		font-family: $second-font;
+		letter-spacing: 0.04em;
+		z-index: 5;
+	}
+
+	.card-content{
+		flex: auto;
+		background: #EDEDEE;
+		padding: 16px 24px;
+		border-radius: 0 0 $r $r;
+		display: flex;
+		flex-direction: column;
+
+		.card-text{
+			flex: auto;
+			margin-bottom: 8px;
+		}
+
+		a{
+			font-weight: bold;
+			text-decoration: underline;
+			color: $primary;
+
+			&:hover,
+			&:focus{
+				text-decoration: none;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px) and (min-width: 576px){
+		.card-image{
+			&:before{
+				padding-top: 68.75%;
+			}
+		}
+	}
+}

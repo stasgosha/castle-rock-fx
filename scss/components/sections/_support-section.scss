@@ -1,0 +1,155 @@
+.support-section{
+	position: relative;
+
+	.section-bg{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		min-width: 1920px;
+		top: 0;
+		pointer-events: none;
+		background: $dark;
+
+		.lines{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			img{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				object-fit: contain;
+				object-position: center center;
+			}
+		}
+	}
+
+	.container{
+		position: relative;
+		z-index: 2;
+	}
+
+	.section-inner{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.section-image{
+		position: relative;
+		width: calc(100% / 12 * 5 + 15px);
+
+		img{
+			position: absolute;
+			width: calc(50vw - 40px);
+			height: 100%;
+			right: 0;
+			top: 0;
+			object-fit: cover;
+			object-position: center center;
+			clip-path: polygon(0 0, calc(100% - 175px) 0, 100% 330px, calc(100% - 175px) 100%, 0 100%);
+		}
+	}
+
+	.section-content{
+		padding: 100px 0;
+		width: calc(50% - 15px);
+		color: #fff;
+	}
+
+	.section-caption{
+		margin-bottom: 50px;
+
+		.sc-subtitle{
+			margin-top: 8px;
+		}
+	}
+
+	.section-features-list{
+		margin-bottom: 50px;
+
+		.item{
+			margin-bottom: 32px;
+			display: flex;
+			align-items: center;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			.item-image{
+				width: 100px;
+				height: 100px;
+				flex: none;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-right: 16px;
+
+				img{
+					max-width: 100%;
+					max-height: 100%;
+					display: block;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 1199px){
+		.section-image{
+			img{
+				object-position: left center;
+				clip-path: polygon(0 0, calc(100% - 90px) 0, 100% 330px, calc(100% - 90px) 100%, 0 100%);
+			}
+		}
+
+		.section-bg{
+			transform: translateX(-65%);
+		}
+	}
+
+	@media screen and (max-width: 991px){
+		.section-inner{
+			flex-direction: column-reverse;
+		}
+
+		.section-bg{
+			min-width: 992px;
+			transform: translateX(-50%);
+
+			.lines{
+				height: calc(100% - 270px);
+			}
+		}
+
+		.section-content{
+			width: 100%;
+			padding-bottom: 50px;
+		}
+
+		.section-image{
+			width: 100%;
+			height: 362px;
+
+			img{
+				width: 100vw;
+				height: 100%;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				clip-path: polygon(0 75px, 63% 0, 100% 75px, 100% 100%, 0 100%);
+				object-position: center top;
+			}
+		}
+
+		.section-features-list{
+			max-width: 510px;
+		}
+	}
+}
