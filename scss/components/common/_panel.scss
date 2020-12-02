@@ -125,6 +125,19 @@
 						}
 					}
 				}
+
+				&.current-menu-item,
+				&.current-menu-parent{
+					> a{
+						font-weight: bold;
+					}
+				}
+				
+				&.current-menu-item{
+					> a{
+						cursor: default;
+					}
+				}
 			}
 
 			.sub-menu{
