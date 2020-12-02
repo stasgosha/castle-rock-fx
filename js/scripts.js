@@ -105,8 +105,24 @@ document.addEventListener('DOMContentLoaded', function(){
 	$('.menu-opener').click(function(e){
 		e.preventDefault();
 
-		$(this).toggleClass('active');
-		$('.mobile-top-nav').toggleClass('opened');
+		$('.menu-opener').toggleClass('active');
+		$('.panel').toggleClass('opened');
+	});
+
+	$('.nav-opener').click(function(e){
+		e.preventDefault();
+
+		$(this).siblings('ul').stop().slideToggle(300);
+		$(this).toggleClass('opened');
+	});
+
+	$('.panel-nav > ul > li').click(function(e){
+		$(this).find('.sub-menu').stop().slideToggle(300);
+		$(this).toggleClass('opened');
+
+		$(this).find('a').click(function(e){
+			e.stopPropagation();
+		});
 	});
 
 	// Sticky Header
