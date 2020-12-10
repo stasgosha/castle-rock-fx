@@ -1,8 +1,9 @@
 .first-screen-section{
 	position: relative;
 	padding: 124px 0 65px;
-	background: #eeedef;
+	// background: #eeedef;
 	color: #fff;
+	z-index: 2;
 
 	.section-bg{
 		width: 100%;
@@ -45,7 +46,7 @@
 			position: absolute;
 			left: 50%;
 			// transform: translateX(-50%);
-			margin-left: calc(-1920px / 2);
+			margin-left: calc(-2050px / 2);
 			top: 0;
 			pointer-events: none;
 			z-index: 2;
@@ -232,7 +233,7 @@
 			
 			.item{
 				width: calc(50% - 15px);
-				margin-bottom: 30px;
+				margin-bottom: 30px !important;
 				padding: 25px 30px !important;
 				z-index: 5;
 
@@ -278,11 +279,11 @@
 		padding-top: 60px;
 
 		.section-features{
-			margin-bottom: -20px;
+			margin-bottom: -20px !important;
 
 			.item{
 				width: calc(50% - 10px);
-				margin-bottom: 20px;
+				margin-bottom: 20px !important;
 				padding: 15px !important;
 				min-height: 120px;
 			}

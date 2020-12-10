@@ -3,17 +3,52 @@
 	position: relative;
 	color: #fff;
 
-	&:before{
-		content: '';
-		display: block;
+	// &:before{
+	// 	content: '';
+	// 	display: block;
+	// 	width: 100%;
+	// 	min-width: 1920px;
+	// 	height: 100%;
+	// 	position: absolute;
+	// 	left: 50%;
+	// 	top: 50%;
+	// 	transform: translate(-50%, -50%);
+	// 	background: url(../img/decorations/awards-lines.svg) no-repeat center center / cover;
+	// }
+
+	.section-bg{
 		width: 100%;
 		min-width: 1920px;
 		height: 100%;
 		position: absolute;
+		top: 0;
 		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		background: url(../img/decorations/awards-lines.svg) no-repeat center center / cover;
+		transform: translateX(-50%);
+		// background: #eeedef;
+		overflow: hidden;
+
+		.lines{
+			width: 100%;
+			min-width: 2050px;
+			height: calc(100% + 50px);
+			position: absolute;
+			left: 50%;
+			margin-left: calc(-2050px / 2);
+			top: 0;
+			pointer-events: none;
+			z-index: 2;
+
+			img{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: block;
+				object-fit: cover;
+				object-position: center center;
+			}
+		}
 	}
 
 	.container{
@@ -61,10 +96,10 @@
 	}
 
 	@media screen and (max-width: 1199px){
-		&:before{
-			content: '';
-			transform: translate(-50%, -50%);
-		}
+		// &:before{
+		// 	content: '';
+		// 	transform: translate(-50%, -50%);
+		// }
 
 		.section-image{
 			width: calc(100% / 12 * 6 + 15px);
@@ -89,9 +124,19 @@
 	}
 
 	@media screen and (max-width: 991px){
-		&:before{
-			background-position: -24% center;
-			transform: translate(-50%, -50%) rotate(-30deg);
+		// &:before{
+		// 	background-position: -24% center;
+		// 	transform: translate(-50%, -50%) rotate(-30deg);
+		// }
+
+		.section-bg{
+			.lines{
+				transform: translate(-50%, -50%) rotate(-30deg);
+
+				img{
+					object-position: -24% center;
+				}
+			}
 		}
 
 		.section-image{
@@ -135,6 +180,15 @@
 			transform: translateX(-50%);
 			background: url(../img/decorations/awards-lines-mobile.svg) no-repeat center center / cover;
 			min-width: 768px;
+		}
+
+		.section-bg{
+			min-width: 768px;
+
+			.lines{
+				min-width: 810px;
+				margin-left: calc(-810px / 2);
+			}
 		}
 
 		.section-caption{

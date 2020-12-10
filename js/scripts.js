@@ -25,13 +25,13 @@ $(function () {
 document.addEventListener('DOMContentLoaded', function(){
 
 	// parallax.js
-	if (document.body.clientWidth >= 992) {
+	// if (document.body.clientWidth >= 992) {
 		// Parallax
 		document.querySelectorAll('[id*="parallax-viewport"]').forEach(item => {
 			let scene = document.getElementById( item.getAttribute('id') );
 			let parallaxInstance = new Parallax(scene);
 		})
-	}
+	// }
 
 	function getRandomInt(max) {
 		return Math.floor(Math.random() * Math.floor(max));
