@@ -136,7 +136,10 @@
 	align-items: center;
 	justify-content: center;
 	padding: 32px;
-	cursor: pointer;
+
+	&[data-video-modal]{
+		cursor: pointer;
+	}
 
 	.block-bg{
 		width: 100%;
