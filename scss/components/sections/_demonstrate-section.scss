@@ -38,6 +38,12 @@
 	}
 
 	@media screen and (min-width: 1200px){
+		&.two-angles{
+			.section-bg{
+				clip-path: polygon(0 105px, 395px 0, 100% 105px, 100% calc(100% - 105px), calc(100% - 395px) 100%, 0 calc(100% - 105px));
+			}
+		}
+
 		.section-grid{
 			display: flex;
 			flex-wrap: wrap;

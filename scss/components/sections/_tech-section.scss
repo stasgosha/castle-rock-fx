@@ -4,5 +4,19 @@
 	.logos-list{
 		justify-content: center;
 		margin-top: 40px;
+		
+		@media screen and (min-width: 1200px){
+			width: calc(100% + 50px * 2);
+			margin-left: -50px;
+			margin-right: -50px;
+			
+			.item{
+				padding: 0 50px;
+
+				img{
+					height: 40px;
+				}
+			}
+		}
 	}
 }

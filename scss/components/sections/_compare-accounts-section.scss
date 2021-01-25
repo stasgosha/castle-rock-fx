@@ -9,6 +9,8 @@
 
 	.section-content{
 		width: calc(50% - 15px);
+		position: relative;
+		z-index: 2;
 	}
 
 	.section-image{
@@ -73,6 +75,15 @@
 		.section-text{
 			max-width: 390px;
 		}
+
+		.section-footer{
+			grid-auto-flow: row;
+			grid-gap: 20px;
+
+			.btn{
+				max-width: 360px;
+			}
+		}
 	}
 
 	@media screen and (max-width: 767px){
@@ -94,6 +105,12 @@
 
 		.section-text{
 			max-width: unset;
+		}
+
+		.section-footer{
+			.btn{
+				max-width: unset;
+			}
 		}
 	}
 }

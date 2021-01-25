@@ -83,6 +83,8 @@ document.addEventListener('DOMContentLoaded', function(){
 			appendDots: $(el).find('.slider-nav'),
 			infinite: true,
 			speed: 600,
+			autoplay: true,
+			autoplaySpeed: 3000
 		});
 
 		equalSlideHeight($(el).find('.first-screen-slider'));
