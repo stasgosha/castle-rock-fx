@@ -80,11 +80,12 @@
 	}
 
 	.btn-gold{
-		background: #ECA314;
+		background: #181818;
+		color: $accent;
 
 		&:hover,
 		&:focus{
-			background: darken(#ECA314, 10%);
+			background: darken(#181818, 10%);
 		}
 	}
 
